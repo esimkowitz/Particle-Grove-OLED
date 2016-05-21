@@ -1,6 +1,11 @@
+#if defined (SPARK)
+// Nothing to include if Spark
+#else
 #include <Wire.h>
-#include <SeeedOLED.h>
 #include <avr/pgmspace.h>
+#endif
+
+#include "Grove_OLED_128x64/Grove_OLED_128x64.h"
 
 static unsigned char SeeedLogo[] PROGMEM ={
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80,
@@ -75,8 +80,8 @@ void setup()
 {
   Wire.begin();	
   SeeedOled.init();  //initialze SEEED OLED display
-  DDRB|=0x21;        
-  PORTB |= 0x21;
+//  DDRB|=0x21;        
+//  PORTB |= 0x21;
 
   SeeedOled.setInverseDisplay();          // Set inverse display
   SeeedOled.clearDisplay();               // clear the screen and set start position to top left corner
