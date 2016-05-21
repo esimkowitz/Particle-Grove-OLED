@@ -1,5 +1,5 @@
 /*
-  SeeedOLED.h - SSD130x OLED Driver Library
+  Grove_OLED_128x64.h - SSD130x OLED Driver Library
   2011 Copyright (c) Seeed Technology Inc.  All right reserved.
   All changes Copyright (c) 2016, Evan Simkowitz. All rights reserved.
 
