@@ -1,3 +1,32 @@
+/*
+||
+|| @file ScrollLeft.cpp
+|| @version 1.0
+|| @author Seeed Technologies Inc., Evan Simkowitz
+|| @contact esimkowitz@wustl.edu
+||
+|| @description
+|| | This demonstrates the scrolling feature included in the library.
+|| #
+||
+|| @license
+|| | This library is free software; you can redistribute it and/or
+|| | modify it under the terms of the GNU General Public
+|| | License as published by the Free Software Foundation; version
+|| | 3 of the License.
+|| |
+|| | This library is distributed in the hope that it will be useful,
+|| | but WITHOUT ANY WARRANTY; without even the implied warranty of
+|| | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+|| | General Public License for more details.
+|| |
+|| | You should have received a copy of the GNU General Public
+|| | License along with this library; if not, write to the Free Software
+|| | Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+|| #
+||
+*/
+
 #if defined (SPARK)
 // Nothing to include if Spark
 #else
@@ -6,6 +35,7 @@
 #endif
 
 #include "Grove_OLED_128x64/Grove_OLED_128x64.h"
+
 
 static unsigned char SeeedLogo[] PROGMEM ={
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80,
@@ -74,36 +104,19 @@ static unsigned char SeeedLogo[] PROGMEM ={
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   
 };
 
-unsigned char Brightness = 0;
-
 void setup()
 {
   Wire.begin();	
   SeeedOled.init();  //initialze SEEED OLED display
-//  DDRB|=0x21;        
-//  PORTB |= 0x21;
 
-  SeeedOled.setInverseDisplay();          // Set inverse display
   SeeedOled.clearDisplay();               // clear the screen and set start position to top left corner
   SeeedOled.drawBitmap(SeeedLogo,1024);   // 1024 = 128 Pixels * 64 Pixels / 8
-  
+  SeeedOled.setHorizontalScrollProperties(Scroll_Left,4,7,Scroll_5Frames);  //Set the properties of Horizontal Scrool
+  SeeedOled.activateScroll();             // Activate Scroll
 
 }
 
 void loop()
 {
   
-  SeeedOled.setBrightness(Brightness++);  // Change the brightness 0 - 255
-  SeeedOled.setPageMode();                // Set display addressing to page mode.
-  SeeedOled.setTextXY(7,13);              // Set the Cursor position to 7th Page , 13th Column
-  SeeedOled.putNumber(Brightness);       
-  delay(50);                              // Delay 50ms between different brightness number
-  if(Brightness >= 255)
-  {
-    Brightness = 0;                      // Reset Brighness to 0.
-    SeeedOled.setTextXY(7,13);           // Display the brighness value starting from 7th Row, 13th Column 
-    SeeedOled.putString("   ");          // Clear 13,14 and 15th Columns. As the numbers are always left aligned - 2 digit and 3 digit will overwrite.
-
-  }
 }
-
