@@ -3,5 +3,5 @@
  	"author": "Visweswara R / Evan Simkowitz", 
  	"version": "1.0", 
  	"license": "GPLv3", 
- 	"description": "Seeedstudio Grove OLED Display 0.96" Library for Particle IDE" 
+ 	"description": "Seeedstudio Grove OLED Display 128x64 Library for Particle IDE" 
 } 
