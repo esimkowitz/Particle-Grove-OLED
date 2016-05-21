@@ -1,6 +1,7 @@
 /*
   SeeedOLED.cpp - SSD130x OLED Driver Library
   2011 Copyright (c) Seeed Technology Inc.  All right reserved.
+  All changes Copyright (c) 2016, Evan Simkowitz. All rights reserved.
 
   Author: Visweswara R, adapted for Particle IDE by Evan Simkowitz
 
