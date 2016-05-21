@@ -1,8 +1,7 @@
 # Particle-Grove-OLED
 Particle IDE library for the Grove 0.96" 128x64 OLED Display
 
-This library is Evan Simkowitz's Particle IDE port of Visweswara R's Arduino library for the Grove 0.96" 128x64 OLED Display. The
-original library was written in 2011 for Seeed Technology Inc.
+This library is Evan Simkowitz's Particle IDE port of Visweswara R's SeeedOLED library, adapted specifically for the Grove 0.96" 128x64 unit. The original library was written in 2011 for Seeed Technology Inc.
 
 All changes Copyright (c) 2016, Evan Simkowitz
 
