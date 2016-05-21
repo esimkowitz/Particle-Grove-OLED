@@ -1,6 +1,10 @@
+#if defined (SPARK)
+// Nothing to include if Spark
+#else
 #include <Wire.h>
-#include <SeeedOLED.h>
+#endif
 
+#include "Grove_OLED_128x64/Grove_OLED_128x64.h"
 
 void setup()
 {
