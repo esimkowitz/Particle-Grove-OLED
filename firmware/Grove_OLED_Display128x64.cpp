@@ -1,5 +1,5 @@
 /*
-  SeeedOLED.cpp - SSD130x OLED Driver Library
+  Grove_OLED_Display128x64.cpp - SSD130x OLED Driver Library
   2011 Copyright (c) Seeed Technology Inc.  All right reserved.
   All changes Copyright (c) 2016, Evan Simkowitz. All rights reserved.
 
@@ -20,10 +20,9 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "SeeedOLED.h"
+#include "Grove_OLED_Display128x64.h"
 
 #if defined (SPARK)
-#include "Adafruit_MCP23008.h"
 #else
 #include <Wire.h>
 #ifdef __AVR__
