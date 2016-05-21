@@ -28,12 +28,8 @@
 #if defined (SPARK)
 #include "application.h"
 #else
-#include <WProgram.h>
 #include <Wire.h>
 #endif
-
-
-
 
 #define SeeedOLED_Max_X 		127	//128 Pixels
 #define SeeedOLED_Max_Y 		63	//64  Pixels
