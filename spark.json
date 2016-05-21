@@ -1,5 +1,5 @@
 { 
- 	"name": "Grove_OLED_128x64", 
+ 	"name": "Grove_OLED_Display128x64", 
  	"author": "Visweswara R / Evan Simkowitz", 
  	"version": "1.0.0", 
  	"license": "GPLv3", 
