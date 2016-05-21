@@ -1,7 +1,7 @@
 {
  	"name": "Grove_OLED_128x64", 
  	"author": "Visweswara R / Evan Simkowitz",
- 	"version": "1.0.0",
+ 	"version": "1.0.1",
  	"license": "GPLv3",
  	"description": "Seeedstudio Grove OLED Display 128x64 Library for Particle IDE"
 }
