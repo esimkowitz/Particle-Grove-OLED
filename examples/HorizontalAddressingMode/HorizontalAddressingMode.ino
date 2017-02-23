@@ -28,18 +28,17 @@
 ||
 */
 
+#include "Grove_OLED_128x64.h"
+
 #if defined (SPARK)
 // Nothing to include if Spark
 #else
 #include <Wire.h>
 #endif
 
-#include "Grove_OLED_128x64/Grove_OLED_128x64.h"
-
-
 void setup()
 {
-  Wire.begin();	
+  Wire.begin();
   SeeedOled.init();  //initialze SEEED OLED display
 
   SeeedOled.clearDisplay();           //clear the screen and set start position to top left corner
@@ -50,5 +49,5 @@ void setup()
 
 void loop()
 {
-  
+
 }
